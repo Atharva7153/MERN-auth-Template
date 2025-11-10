@@ -1,0 +1,63 @@
+.home-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 60% 20%, #121224, #060611);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphism Card */
+.home-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  width: 400px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.746);
+  transition: all 0.3s ease;
+}
+
+.home-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(255, 2, 183, 0.45);
+}
+
+/* Heading */
+.home-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00aaff;
+  text-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+/* Subtext */
+.home-subtext {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.home-btn {
+  background: linear-gradient(135deg, #00aaff, #0077ff);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  color: #0b0b15;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  background: linear-gradient(135deg, #00caff, #0066ff);
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+  transform: scale(1.05);
+}

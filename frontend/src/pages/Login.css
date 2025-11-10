@@ -1,0 +1,101 @@
+/* Background */
+.login-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 70% 20%, #141426, #0b0b15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphism Card */
+.login-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.8rem 3rem;
+  width: 360px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.login-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.4);
+}
+
+/* Heading */
+.login-heading {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #00aaff;
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.6);
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-input::placeholder {
+  color: #bbb;
+}
+
+.login-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #00aaff;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00aaff, #0077ff);
+  color: #0b0b15;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #00caff, #0066ff);
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.login-register-link {
+  color: #00aaff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-register-link:hover {
+  text-shadow: 0 0 8px #00aaff;
+}

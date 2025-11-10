@@ -1,0 +1,75 @@
+.profile-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 50% 20%, #0f0f1c, #04040a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Glass card */
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(0, 180, 255, 0.45);
+}
+
+/* Title */
+.profile-heading {
+  font-size: 1.8rem;
+  color: #00aaff;
+  text-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Profile box */
+.profile-box {
+  margin-bottom: 2.2rem;
+}
+
+.profile-label {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+.profile-username {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Logout button */
+.logout-btn {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.4);
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff616f, #ff446b);
+  box-shadow: 0 0 20px rgba(255, 65, 108, 0.6);
+  transform: scale(1.05);
+}

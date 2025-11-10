@@ -1,0 +1,105 @@
+/* Background setup */
+*{
+    margin: 0;
+}
+.register-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 30% 20%, #1e1e2f, #0d0d1a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Glassmorphism card */
+.register-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.8rem 3rem;
+  width: 360px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* Heading */
+.register-heading {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Inputs */
+.register-input {
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.register-input::placeholder {
+  color: #bbb;
+}
+
+.register-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #00ffff;
+}
+
+/* Button */
+.register-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00ffff, #0088ff);
+  color: #0d0d1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #00ffee, #0077ff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* Footer */
+.register-footer {
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.register-login-link {
+  color: #00ffff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.register-login-link:hover {
+  text-shadow: 0 0 8px #00ffff;
+}

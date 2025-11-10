@@ -1,38 +1,48 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Register.css'
 
 export const Register = () => {
-  const [username, setU] = useState()
-  const [password, setP] = useState()
-
+  const [username, setU] = useState('')
+  const [password, setP] = useState('')
   const nav = useNavigate()
 
-  const handleSubmit = async ()=>{
-
-    await axios.post('http://localhost:5000/auth/register', {
-      username, password
-    })
-
+  const handleSubmit = async () => {
+    await axios.post('http://localhost:5000/auth/register', { username, password })
     nav("/login")
-
   }
 
   return (
-    <div>
-        <h1>Register Yourself</h1>
+    <div className="register-wrapper">
+      <div className="register-glass">
+        <h1 className="register-heading">Create Account</h1>
 
-        <input onChange={e => setU(e.target.value)} type="text" placeholder='enter username' />
+        <input
+          onChange={e => setU(e.target.value)}
+          type="text"
+          placeholder="Username"
+          className="register-input"
+        />
 
-        <br />
+        <input
+          onChange={e => setP(e.target.value)}
+          type="password"
+          placeholder="Password"
+          className="register-input"
+        />
 
-        <input onChange={e => setP(e.target.value)} type="text" placeholder='Enter password' />
+        <button onClick={handleSubmit} className="register-btn">
+          Register
+        </button>
 
-        <br />
-
-        <button onClick={handleSubmit}>Register</button>
-
-        <p>Registered already ?? <b onClick={e => nav('/login')}>LOGIN</b></p>
+        <p className="register-footer">
+          Already have an account?{" "}
+          <b onClick={() => nav('/login')} className="register-login-link">
+            Login
+          </b>
+        </p>
+      </div>
     </div>
   )
 }

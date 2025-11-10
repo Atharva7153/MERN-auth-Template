@@ -1,43 +1,50 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Login.css'
 
 const Login = () => {
-
-  const [username, setU] = useState()
-  const [password, setP] = useState()
+  const [username, setU] = useState('')
+  const [password, setP] = useState('')
   const nav = useNavigate()
 
-  
-  const handleSubmit = async () =>{
-    axios.post("http://localhost:5000/auth/login", {
-      username, password
-    }, {withCredentials : true})
-    .then(res => {
-      alert("login Succesfull"),
-      nav("/")
-    })
-    .catch(err => console.log(err))
+  const handleSubmit = async () => {
+    axios.post("http://localhost:5000/auth/login", { username, password }, { withCredentials: true })
+      .then(res => {
+        alert("Login Successful")
+        nav("/")
+      })
+      .catch(err => console.log(err))
   }
 
   return (
-    <div>
-        <h1>Login</h1>
+    <div className="login-wrapper">
+      <div className="login-glass">
+        <h1 className="login-heading">Welcome Back</h1>
 
-        <input onChange={e => setU(e.target.value)} type="text" placeholder='enter username' />
+        <input
+          onChange={e => setU(e.target.value)}
+          type="text"
+          placeholder="Username"
+          className="login-input"
+        />
 
-        <br />
+        <input
+          onChange={e => setP(e.target.value)}
+          type="password"
+          placeholder="Password"
+          className="login-input"
+        />
 
-        <input onChange={e => setP(e.target.value)} type="text" placeholder='Enter password' />
+        <button onClick={handleSubmit} className="login-btn">Login</button>
 
-        <br />
-
-        <button onClick={handleSubmit}>Login</button>
-
-
-        <p>New here?? <b onClick={e => nav("/register")}>Register Now</b></p>
-
-        
+        <p className="login-footer">
+          New here?{" "}
+          <b onClick={() => nav("/register")} className="login-register-link">
+            Register Now
+          </b>
+        </p>
+      </div>
     </div>
   )
 }

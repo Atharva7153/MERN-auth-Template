@@ -1,17 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Home.css'
 
 export const Home = () => {
-
   const nav = useNavigate()
 
-  const profile = ()=>{
+  const profile = () => {
     nav('/profile')
   }
+
   return (
-    <div>
-      <h1>This is home Page</h1>
-      <button onClick={profile}>View Profile</button>
+    <div className="home-wrapper">
+      <div className="home-glass">
+        <h1 className="home-heading">Welcome Home 👋</h1>
+        <p className="home-subtext">You’ve successfully logged in.</p>
+        <button onClick={profile} className="home-btn">View Profile</button>
+      </div>
     </div>
   )
 }
